@@ -11,8 +11,11 @@ def compute_mean(data):
     Returns:
         float: the mean value of the list
     """
-    mean = sum(data)/ len(data)
-    return mean
+    if len(data) == 0:
+        return None
+    else :
+        mean = sum(data)/ len(data)
+        return mean
 
 def read_data(filename, colname, num_measurements):
     """Read data from a file and select a column
