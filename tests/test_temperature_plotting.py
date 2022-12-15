@@ -18,4 +18,15 @@ def test_compute_mean():
     calc = tpl.compute_mean([])
     assert calc == None
     
-  
+# Integration test
+def test_main():
+    tpl.main()
+    assert os.path.exists("plot_25.png")
+    
+
+test_main()
+
+# Read Data test
+
+def test_read_data():
+    tpl.read_data("data/temperature.csv", "Air temperature (degC)", 15)
